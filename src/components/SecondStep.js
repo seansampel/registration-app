@@ -30,8 +30,8 @@ return (
           className={`${errors.user_email ? 'input-error' : ''}`}
           />
           {errors.user_email && (
-         <p className="errorMsg">{errors.user_email.message}</p>
-         )}
+            <p className="errorMsg">{errors.user_email.message}</p>
+           ) }
       </Form.Group>
       <Form.Group controlId="password">
       <Form.Label>Password</Form.Label>
