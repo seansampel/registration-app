@@ -7,14 +7,14 @@ const SecondStep = (props) => {
 
   const onSubmit = (data) => {
     console.log(data);
+    props.history.push('/third');
   }
 
 return (
-
-
-  <div className="col-md-6 offset-md-3">
+  <Form Form className="input-form" onSubmit={handleSubmit(onSubmit)}>
+    <div className="col-md-6 offset-md-3">
       <Form.Group controlId="first_name">
-          <Form.Lanel>Email</Form.Lanel>
+          <Form.Label>Email</Form.Label>
           <Form.Control
           type="email"
           name="user_email"
@@ -58,7 +58,9 @@ return (
       Next
     </Button>
   </div>
+  </Form>
   );
 };
+
 
 export default SecondStep;
