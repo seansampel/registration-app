@@ -10,7 +10,7 @@ const ThirdStep = (props) => {
     const [cities, setCities] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
-    const [selctedCountry, setSelectedCountry] = useState('');
+    const [selectedCountry, setSelectedCountry] = useState('');
     const [selectedState, setSelectedState] = useState('');
     const [selectedCity, setSelectedCity] = useState('');
 
