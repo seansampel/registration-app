@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import FirstStep from '../components/FirstStep';
 import Header from '../components/Header';
 import SecondStep from '../components/SecondStep';
 import ThirdStep from '../components/ThirdStep';
 
-const [user, setUser] = useState({});
 
-const updateUser = (data) => {
+const AppRouter = () => {
+  const [user, setUser] = useState({});
+
+  const updateUser = (data) => {
     setUser((prevUser) => ({ ...prevUser, ...data }));
   };
 
@@ -15,8 +17,7 @@ const updateUser = (data) => {
     setUser({});
   };
 
-
-const AppRouter = () => (
+  return (
   <BrowserRouter>
         <div>
             <Header />
@@ -45,5 +46,5 @@ const AppRouter = () => (
         </div>
   </BrowserRouter>
 );
-
+};
 export default AppRouter;

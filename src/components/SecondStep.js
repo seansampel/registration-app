@@ -36,18 +36,18 @@ return (
       <Form.Group controlId="password">
       <Form.Label>Password</Form.Label>
       <Form.Control
-        type="password"
-        name="user_password"
-        placeholder="Choose a password"
-        autoComplete="off"
-        ref={register({
+          type="password"
+          name="user_password"
+          placeholder="Choose a password"
+          autoComplete="off"
+          ref={register({
           required: 'Password is required.',
           minLength: {
             value: 6,
             message: 'Password should have at-least 6 characters.'
           }
         })}
-        className={`${errors.user_password ? 'input-error' : ''}`}
+          className={`${errors.user_password ? 'input-error' : ''}`}
       />
       {errors.user_password && (
         <p className="errorMsg">{errors.user_password.message}</p>
